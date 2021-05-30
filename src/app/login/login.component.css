@@ -1,0 +1,20 @@
+div{
+    margin-top: 10px;
+}
+h3{
+    text-align: center;
+}
+p{
+    text-align: center;
+}
+
+.form-field{
+    width: 80%;
+}
+
+.btnPosition{
+   text-align: center;
+}
+.btn{
+    width: 200px;
+}

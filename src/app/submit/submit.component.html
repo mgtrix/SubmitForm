@@ -1,0 +1,91 @@
+<div>
+    <h3>Submit</h3>
+    <form [formGroup]="registerForm" (ngSubmit)="submit()">
+        <!-- name -->
+    <p>
+        <mat-form-field class="form-field" appearance="legacy">
+            <mat-label>Name:</mat-label>
+            <input matInput placeholder="name" formControlName="name" [ngClass]="{ 'is-invalid': submitted && f.name.errors }">
+            <mat-icon matSuffix>face</mat-icon>
+            <mat-hint>Input your Name</mat-hint>
+            <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                <mat-hint *ngIf="f.name.errors.required">First Name is required</mat-hint>
+            </div>
+        </mat-form-field>
+    </p>
+          <!-- surname -->
+    <p>
+        <mat-form-field class="form-field" appearance="legacy">
+            <mat-label>Surname:</mat-label>
+            <input matInput placeholder="surname" formControlName="surname" [ngClass]="{ 'is-invalid': submitted && f.surname.errors }">
+            <mat-hint>Input your Surname</mat-hint>
+            <div *ngIf="submitted && f.surname.errors" class="invalid-feedback">
+                <mat-hint *ngIf="f.surname.errors.required">Surname is required</mat-hint>
+            </div>
+        </mat-form-field>
+    </p>
+            <!-- dateBirth -->
+    <p>
+        <mat-form-field class="form-field" appearance="legacy">
+            <mat-label>Date Birth:</mat-label>
+            <input matInput type="date" placeholder="datebirth" formControlName="date" [ngClass]="{ 'is-invalid': submitted && f.date.errors }">
+            <mat-icon matSuffix>event</mat-icon>
+            <mat-hint>Input your date birth</mat-hint>
+            <div *ngIf="submitted && f.date.errors" class="invalid-feedback">
+                <mat-hint *ngIf="f.date.errors.required">DateBirth is required</mat-hint>
+            </div>
+        </mat-form-field>
+    </p>
+          
+    <p>
+        <mat-form-field class="form-field" appearance="legacy">
+            <mat-label>Address:</mat-label>
+            <input matInput type="text" placeholder="address" formControlName="address">
+            <mat-icon matSuffix>contact_mail</mat-icon>
+            <mat-hint>Input your address</mat-hint>
+        </mat-form-field>
+    </p>
+
+    <p>
+        <mat-form-field class="form-field" appearance="legacy">
+            <mat-label>Email Address:</mat-label>
+            <input matInput placeholder="pat@example.com" formControlName="email" required>
+            <mat-icon matSuffix>mail_outline</mat-icon>
+            <mat-hint>Input the fully qualified email address</mat-hint>
+        </mat-form-field>
+    </p>
+
+    <p>
+        <mat-form-field class="form-field" appearance="standard">
+            <mat-label>Phone Number:</mat-label>
+            <input matInput placeholder="Your Phone"  formControlName="phone">
+            <mat-icon matSuffix>phone</mat-icon>
+            <mat-hint>Phone number with Country code</mat-hint>
+        </mat-form-field>
+    </p>
+
+    <p>
+        <mat-form-field class="form-field" appearance="fill">
+            <mat-label>Username:</mat-label>
+            <input matInput placeholder="Your username"  formControlName='username'>
+            <mat-icon matSuffix>person_outline</mat-icon>
+            <mat-hint>Use unique username</mat-hint>
+        </mat-form-field>
+    </p>
+
+    <p>
+        <mat-form-field class="form-field" appearance="outline">
+            <mat-label>Password</mat-label>
+            <input type="password" matInput placeholder="Your password" formControlName="password">
+            <mat-icon matSuffix>lock</mat-icon>
+            <mat-hint>put a password</mat-hint>
+        </mat-form-field>
+    </p>
+    <div class="btnPosition">
+        <button mat-raised-button color="primary" (click)='submit()'>
+        Submit
+        </button>
+    </div>
+    </form>
+    
+</div>

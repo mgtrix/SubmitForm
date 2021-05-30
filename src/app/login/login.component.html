@@ -1,0 +1,30 @@
+<h3>Login</h3>
+
+<form [formGroup]="loginForm" (ngSumbit)='submit()'>
+<p>
+    <mat-form-field class="form-field" appearance="fill">
+        <mat-label>Username:</mat-label>
+        <input matInput placeholder="Your username" formControlName="username" [ngClass]="{ 'is-invalid': submitted && f.username.errors } ">
+        <mat-icon matSuffix>person_outline</mat-icon>
+        <mat-hint>Use unique username</mat-hint>
+        <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+            <mat-hint *ngIf="f.username.errors.required">Username is required</mat-hint>
+        </div>
+    </mat-form-field>
+</p>
+
+<p>
+    <mat-form-field class="form-field" appearance="outline">
+        <mat-label>Password</mat-label>
+        <input type="password" matInput placeholder="Your password" formControlName="password" [ngClass]="{ 'is-invalid': submitted && f.password.errors } ">
+        <mat-icon matSuffix>lock</mat-icon>
+        <mat-hint>put your password</mat-hint>
+        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+            <mat-hint *ngIf="f.password.errors.required">Password is required</mat-hint>
+        </div>
+    </mat-form-field>
+</p>
+<div class="btnPosition">
+<button class="btn"  mat-raised-button color="primary" (click)='submit()'>Login</button>
+</div>
+</form>
