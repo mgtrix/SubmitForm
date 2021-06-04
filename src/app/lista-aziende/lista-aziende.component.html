@@ -1,0 +1,29 @@
+<div mat-card-avatar class="avatar" id="pippo" style="background-color: yellow;"><p class="username">{{user.username}}</p></div>
+<h2>Lista Aziende</h2>
+
+<div class="btnPosition">
+<button mat-raised-button color="primary" routerLink='/aggiungiazienda'>Aggiungi azienda</button>
+</div>
+
+<div>
+<ng-container *ngFor='let azienda of aziende'>
+<mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar  style="background-image: url('https://picsum.photos/id/{{azienda.imglink}}/200/200');background-size: cover;"></div>
+      <mat-card-title>{{azienda.name}}</mat-card-title>
+      <mat-card-subtitle>{{azienda.subtitle}}</mat-card-subtitle>
+    </mat-card-header>
+        <p>{{azienda.yearofDeploy}}</p>
+    <mat-card-content>
+      <p>
+        {{azienda.description}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+</ng-container>
+</div>
+
+

@@ -1,0 +1,49 @@
+<h3>Aggiungi Azienda</h3>
+<form [formGroup]="registerForm" (ngSubmit)="submit()">
+    <!-- name -->
+<p>
+    <mat-form-field class="form-field" appearance="legacy">
+        <mat-label>Name:</mat-label>
+        <input matInput placeholder="name" formControlName="name" [ngClass]="{ 'is-invalid': submitted && f.name.errors }">
+        <mat-hint>Input Agency Name</mat-hint>
+        <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+            <mat-hint *ngIf="f.name.errors.required">Agency Name is required</mat-hint>
+        </div>
+    </mat-form-field>
+</p>
+<p>
+    <mat-form-field class="form-field" appearance="legacy">
+        <mat-label>Subtitle:</mat-label>
+        <input matInput placeholder="subtitle" formControlName="subtitle" [ngClass]="{ 'is-invalid': submitted && f.subtitle.errors }">
+        <mat-hint>Input Agency Subtitle</mat-hint>
+        <div *ngIf="submitted && f.subtitle.errors" class="invalid-feedback">
+            <mat-hint *ngIf="f.subtitle.errors.required">Agency Subtitle is required</mat-hint>
+        </div>
+    </mat-form-field>
+</p>
+<p>
+    <mat-form-field class="form-field" appearance="legacy">
+        <mat-label>Description:</mat-label>
+        <input matInput placeholder="description" formControlName="description" [ngClass]="{ 'is-invalid': submitted && f.subtitle.errors }">
+        <mat-hint>Input Agency Description</mat-hint>
+        <div *ngIf="submitted && f.description.errors" class="invalid-feedback">
+            <mat-hint *ngIf="f.description.errors.required">Agency Description is required</mat-hint>
+        </div>
+    </mat-form-field>
+</p>
+<p>
+    <mat-form-field class="form-field" appearance="legacy">
+        <mat-label>Year Of Deploy:</mat-label>
+        <input matInput placeholder="year of deploy" formControlName="yearofDeploy" [ngClass]="{ 'is-invalid': submitted && f.subtitle.errors }">
+        <mat-hint>Input Agency Yearr of Deploy </mat-hint>
+        <div *ngIf="submitted && f.yearofDeploy.errors" class="invalid-feedback">
+            <mat-hint *ngIf="f.yearofDeploy.errors.required">Agency Year of Deploy is required</mat-hint>
+        </div>
+    </mat-form-field>
+</p>
+</form>
+<div class="btnPosition">
+    <button mat-raised-button color="primary" (click)='submit()' routerLink='/aziende'>
+    Submit
+    </button>
+</div>

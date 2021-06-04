@@ -1,0 +1,33 @@
+h2{
+    margin: 10px;
+}
+
+.avatar{
+  margin: 20px;
+  float: right;
+  background-color: grey !important;
+  color: white;
+  shape-outside: circle();
+}
+#pippo{
+  background-color: red;
+}
+.username{
+   text-align: center; 
+   margin-top: 25%; 
+}
+.btnPosition{
+  margin-left: 10px;
+}
+
+
+
+.example-card {
+    max-width: 100%;
+    margin: 20px;
+  }
+  
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }

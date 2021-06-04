@@ -12,6 +12,8 @@ import { SubmitComponent } from './submit/submit.component';
 import { NavigationHeaderComponent } from './navigation-header/navigation-header.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
+import { ListaAziendeComponent } from './lista-aziende/lista-aziende.component';
+import { AggiungiAziendaComponent } from './aggiungi-azienda/aggiungi-azienda.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -23,7 +25,11 @@ import {MatButtonModule} from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatMenuModule} from '@angular/material/menu';
+import {MatCardModule} from '@angular/material/card';
+import {MatGridListModule} from '@angular/material/grid-list';
 import { FlexLayoutModule } from '@angular/flex-layout';
+
+
 
 
 
@@ -38,7 +44,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     SubmitComponent,
     NavigationHeaderComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    ListaAziendeComponent,
+    AggiungiAziendaComponent
   ],
   imports: [
     BrowserModule,
@@ -56,6 +64,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatSidenavModule,
     MatDividerModule,
     MatMenuModule,
+    MatCardModule,
+    MatGridListModule,
     FlexLayoutModule
   
   ],

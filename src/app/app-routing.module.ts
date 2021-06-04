@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { SubmitComponent } from './submit/submit.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
+import { ListaAziendeComponent } from './lista-aziende/lista-aziende.component';
+import { AggiungiAziendaComponent } from './aggiungi-azienda/aggiungi-azienda.component';
 import { AuthGuard } from './_helpers';
 
 const routes: Routes = [
@@ -10,6 +12,8 @@ const routes: Routes = [
   // {path:'home', component: HomeComponent },
   {path:'submit', component: SubmitComponent},
   {path:'login', component: LoginComponent},
+  {path:'aziende', component: ListaAziendeComponent},
+  {path:'aggiungiazienda', component: AggiungiAziendaComponent},
 
   { path: '**', redirectTo: '' }
 ];
